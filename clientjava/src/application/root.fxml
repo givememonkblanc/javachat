@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="system" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab text="채팅창">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane fx:id="root" layoutX="-2.0" prefHeight="359.0" prefWidth="600.0">
+                     <top>
+                        <Pane fx:id="hbox" prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="userName" layoutX="23.0" layoutY="17.0" />
+                              <TextField fx:id="IPText" layoutX="214.0" layoutY="17.0" text="127.0.0.1" />
+                              <TextField fx:id="portText" layoutX="414.0" layoutY="17.0" text="9876" />
+                           </children>
+                        </Pane>
+                     </top>
+                     <bottom>
+                        <Pane prefHeight="68.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="input" layoutX="132.0" layoutY="20.0" onAction="#inputAction" prefHeight="29.0" prefWidth="350.0" />
+                              <Button fx:id="connectionButton" layoutX="42.0" layoutY="20.0" mnemonicParsing="false" onAction="#connectionAction" text="접속하기" />
+                              <Button fx:id="sendButton" layoutX="496.0" layoutY="20.0" mnemonicParsing="false" onAction="#sendAction" text="보내기" />
+                           </children>
+                        </Pane>
+                     </bottom>
+                     <center>
+                        <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="접속회원">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane layoutX="-1.0" prefHeight="359.0" prefWidth="600.0">
+                     <center>
+                        <TextArea prefHeight="237.0" prefWidth="481.0" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <Pane prefHeight="55.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="478.0" layoutY="13.0" mnemonicParsing="false" text="정보 확인" />
+                           </children>
+                        </Pane>
+                     </top>
+                     <bottom>
+                        <Pane prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField layoutX="40.0" layoutY="19.0" prefHeight="29.0" prefWidth="499.0" />
+                           </children>
+                        </Pane>
+                     </bottom>
+                     <left>
+                        <Pane prefHeight="237.0" prefWidth="39.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Pane prefHeight="237.0" prefWidth="66.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ScrollBar layoutY="2.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="18.0" />
+                           </children>
+                        </Pane>
+                     </right>
+                  </BorderPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
